@@ -4,14 +4,16 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start();
+
 require("turbolinks").start();
 require("@rails/activestorage").start();
+
 require("channels");
 
 import "bootstrap/dist/js/bootstrap.min";
 import "../src/application.scss";
 
-$(document).ready(function(){
+$(document).on("turbolinks:load", function(){
     console.log("Webpacker!!!");
     $('[data-toggle="tooltip"]').tooltip();
 });
